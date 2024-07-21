@@ -1,14 +1,14 @@
 "use client";
 
 import { useState, useEffect, useRef } from 'react';
-
 import { default as languageCodesData } from '@/data/language-codes.json';
 import { default as countryCodesData } from '@/data/country-codes.json';
+import brian from '../lib/brian';
 
 const languageCodes: Record<string, string> = languageCodesData;
 const countryCodes: Record<string, string> = countryCodesData;
 
-const Translator = () => {
+const TradewithAI = () => {
   const recognitionRef = useRef<SpeechRecognition>();
 
   const [isActive, setIsActive] = useState<boolean>(false);
@@ -82,13 +82,27 @@ const Translator = () => {
         method: 'POST',
         body: JSON.stringify({
           text: transcript,
-          language: 'pt-BR'
+          language: 'en'
         })
       }).then(r => r.json());
 
-      setTranslation(results.text);
+      const translatedText = results.text;
+      setTranslation(translatedText);
 
-      speak(results.text);
+      speak(translatedText);
+
+      // Extract parameters from the translated text and execute transaction
+      const transactionParams = await brian.extract({
+        prompt: translatedText,
+      });
+
+      if (transactionParams) {
+        const transactionResult = await brian.transact({
+          ...transactionParams,
+        });
+
+        console.log('Transaction Result:', transactionResult);
+      }
     }
 
     recognitionRef.current.start();
@@ -106,7 +120,6 @@ const Translator = () => {
 
   return (
     <div className="mt-12 px-4">
-
       <div className="max-w-lg rounded-xl overflow-hidden mx-auto">
         <div className="bg-zinc-200 p-4 border-b-4 border-zinc-300">
           <div className="bg-blue-200 rounded-lg p-2 border-2 border-blue-300">
@@ -163,7 +176,6 @@ const Translator = () => {
         </div>
       </div>
 
-
       <div className="max-w-lg mx-auto mt-12">
         <p className="mb-4">
           Spoken Text: { text }
@@ -172,9 +184,8 @@ const Translator = () => {
           Translation: { translation }
         </p>
       </div>
-
     </div>
   )
 }
 
-export default Translator;
+export default TradewithAI;
