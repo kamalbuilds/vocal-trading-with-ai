@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 
 
 import { Web3Modal } from "@/context/web3modal";
+import { ThirdwebProvider } from "thirdweb/react";
 
 
 export default function RootLayout({
@@ -22,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <Web3Modal>
+      <Web3Modal >
         <Navbar />
         {children}
       </Web3Modal>
