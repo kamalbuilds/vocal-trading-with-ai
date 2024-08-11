@@ -12,6 +12,8 @@
     "@brian-ai/sdk": "^0.1.0",
     "@chainflip/sdk": "^1.4.3",
     "@types/dom-speech-recognition": "^0.0.4",
+    "@web3modal/ethers": "^5.0.11",
+    "ethers": "^6.13.2",
     "next": "14.1.0",
     "openai": "^4.28.0",
     "react": "^18",

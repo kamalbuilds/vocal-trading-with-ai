@@ -4,21 +4,21 @@ import { useState, useEffect, useRef } from 'react';
 import { default as languageCodesData } from '@/data/language-codes.json';
 import { default as countryCodesData } from '@/data/country-codes.json';
 import brian from '../lib/brian';
-import { useActiveAccount } from 'thirdweb/react';
+import { useWeb3ModalAccount } from '@web3modal/ethers/react';
 
 const languageCodes: Record<string, string> = languageCodesData;
 const countryCodes: Record<string, string> = countryCodesData;
 
 const TradewithAI = () => {
   const recognitionRef = useRef<SpeechRecognition>();
-
+ 
   const [isActive, setIsActive] = useState<boolean>(false);
   const [text, setText] = useState<string>();
   const [translation, setTranslation] = useState<string>();
   const [voices, setVoices] = useState<Array<SpeechSynthesisVoice>>();
   const [language, setLanguage] = useState<string>('pt-BR');
 
-  const activeAccount = useActiveAccount();
+  const { address } = useWeb3ModalAccount();
 
   const isSpeechDetected = false;
 
@@ -102,7 +102,7 @@ const TradewithAI = () => {
       if (transactionParams) {
         const transactionResult = await brian.transact({
           ...transactionParams,
-          ...activeAccount!
+          ...address!
         });
 
         console.log('Transaction Result:', transactionResult);
