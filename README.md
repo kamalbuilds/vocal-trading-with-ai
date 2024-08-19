@@ -7,6 +7,27 @@ This project utilizes solvers to build and execute transactions on behalf of the
 ### Description
 Experience seamless trading and portfolio management through voice commands in any language. Leveraging advanced AI and speech technologies, our platform translates your spoken commands into actionable trades and portfolio adjustments. Harness the power of the Speech API, OpenAI, and the Brian API and SDK to make trading effortless and multilingual.
 
+### Problem Statement
+
+
+**1. Wallet Setup Complexity:**  
+Users often face difficulties in setting up and managing crypto wallets, a prerequisite for engaging in DeFi activities. This technical barrier discourages potential users from entering the space.
+
+**2. Language Barriers:**  
+The global nature of cryptocurrency is hindered by language barriers, limiting non-English speakers' ability to participate effectively in trading and portfolio management.
+
+**3. Knowledge Barriers:**  
+Many users lack the necessary understanding of DeFi protocols, making it challenging to navigate the complexities of decentralized finance. This knowledge gap prevents them from making informed decisions and taking advantage of the best trading opportunities available.
+
+**4. Optimal Trade Routes:**  
+Users struggle to identify the best routes for swaps, cross-chain swaps, and bridge operations across different chains. This lack of clarity can result in suboptimal trades and missed opportunities.
+
+**5. Onboarding Challenges:**  
+The onboarding process for new users into the DeFi ecosystem is often cumbersome, involving multiple steps and a steep learning curve. Simplifying this process is crucial to enhancing user adoption.
+
+**6. Crypto-to-Fiat Conversion:**  
+Converting cryptocurrencies to fiat currency remains a significant hurdle for users, especially those unfamiliar with the available tools and platforms that facilitate this process.
+
 ### Features
 - **AppKit Swaps Feature:** We are Empowering users with integrated token swapping, simplifying the process of exchanging tokens for a frictionless experience within the app.
 - **AppKit On-Ramp:** Transform user experiences with in-app crypto purchases, enabling direct fiat-to-crypto transactions.
