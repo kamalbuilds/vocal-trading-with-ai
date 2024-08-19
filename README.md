@@ -43,3 +43,30 @@ This streamlined process ensures that language barriers are eliminated, making t
 - **In-App Crypto Buys:** Facilitate the purchase of 100+ tokens across multiple chains within the app.
 - **Direct Credit Card Use:** Enable fiat-to-crypto transactions with credit cards and 60+ fiat currencies.
 - **Secure Infrastructure:** Powered by Coinbase, ensuring compliance and credibility for transactions.
+
+## Supported Chains
+Ethereum 
+
+Base
+
+Optimism
+
+Arbitrum
+
+ZK Sync
+
+Polygon
+
+Blast
+
+Scroll
+
+Gnosis chain
+
+Taiko
+
+BSC
+
+Avalanche
+
+Starknet
