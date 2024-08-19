@@ -83,7 +83,7 @@ const TransactionPage = () => {
           onClick={generatePrompt}
           className="border rounded-md px-2 py-1 mt-8"
         >
-          Genreate
+          Generate
         </button>
       </div>
     </div>
