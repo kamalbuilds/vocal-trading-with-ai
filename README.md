@@ -1,6 +1,6 @@
 # Vocal Trading with AI
 
-- "Trade Smartly with Your Voice – In Any Language!"
+- "Trade Smartly with Your Voice – In Any Language! and get the best routes for swap, cross-swap, and bridge operations on different chains."
 
 This project utilizes solvers to build and execute transactions on behalf of the users.
 
