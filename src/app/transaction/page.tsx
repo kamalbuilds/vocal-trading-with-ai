@@ -67,6 +67,23 @@ const TransactionPage = () => {
     }
   };
 
+  const getPromptParams = async () => {
+    console.log("prompt", prompt);
+
+    try {
+      const res = await fetch('/api/extractParams', {
+        method: 'POST',
+        body: JSON.stringify({ prompt })
+      })
+
+      const response = await res.json();
+      console.log("response", response);
+    } catch (error) {
+      console.log("Error", error);
+    }
+
+  }
+
   return (
     <div className="flex flex-col gap-4 mt-12 ">
       <div>
@@ -80,7 +97,7 @@ const TransactionPage = () => {
           />
         </div>
         <button
-          onClick={generatePrompt}
+          onClick={getPromptParams}
           className="border rounded-md px-2 py-1 mt-8"
         >
           Generate
